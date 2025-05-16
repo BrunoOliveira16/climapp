@@ -8,14 +8,14 @@ const Cities = () => {
     <LinearGradient colors={["#00457d", "#05051f"]} style={style.container}>
       <ScrollView>
         <View style={style.scrollList}>
-          {citiesData.map((city) => (
-            <View key={city.cid} style={style.listItem}>
+          {citiesData.map((item) => (
+            <View key={item.cid} style={style.listItem}>
               <Image
                 style={style.cityImage}
                 source={require("../assets/images/clouds.png")}
               />
-              <Text style={style.cityName}>{city.city}</Text>
-              <Text style={style.cityTemp}>{city.temp}º</Text>
+              <Text style={style.cityName}>{item.city}</Text>
+              <Text style={style.cityTemp}>{item.temp}º</Text>
             </View>
           ))}
         </View>
